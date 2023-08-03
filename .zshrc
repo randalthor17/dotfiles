@@ -23,6 +23,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # exports
 export PATH=~/.local/bin:~/.local/share/apx:$PATH
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 # nvm export
 export NVM_DIR="$HOME/.nvm"
