@@ -1,45 +1,65 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+function zcompile-many() {
+  local f
+  for f; do zcompile -R -- "$f".zwc "$f"; done
+}
+
+# Clone and compile to wordcode missing plugins.
+if [[ ! -e ~/.zsh/zsh-syntax-highlighting ]]; then
+  git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+  zcompile-many ~/.zsh/zsh-syntax-highlighting/{zsh-syntax-highlighting.zsh,highlighters/*/*.zsh}
+fi
+if [[ ! -e ~/.zsh/zsh-autosuggestions ]]; then
+  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
+  zcompile-many ~/.zsh/zsh-autosuggestions/{zsh-autosuggestions.zsh,src/**/*.zsh}
+fi
+if [[ ! -e ~/.zsh/powerlevel10k ]]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
+  make -C ~/.zsh/powerlevel10k pkg
+fi
+if [[ ! -e ~/.zsh/zsh-vi-mode ]]; then
+  git clone --depth=1 https://github.com/jeffreytse/zsh-vi-mode.git /.zsh/zsh-vi-mode
+  zcompile-many ~/.zsh/zsh-vi-mode/{zsh-vi-mode.plugin.zsh,zsh-vi-mode.zsh}
+fi
+
+# Activate Powerlevel10k Instant Prompt.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Lines configured by zsh-newuser-install
+# Enable the "new" completion system (compsys).
+autoload -Uz compinit bashcompinit && compinit && bashcompinit
+[[ ~/.zcompdump.zwc -nt ~/.zcompdump ]] || zcompile-many ~/.zcompdump
+unfunction zcompile-many
+
+# aliases
+# alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias ls='exa --icons'
+
+# exports
+export PATH=~/.local/bin:~/.local/share/apx:~/git-repos/quickemu:~/.juliaup/bin:$PATH
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export GTK_MODULES="unity-gtk-module"
+export SAL_USE_VCLPLUGIN=gtk
+
+# zsh-newuser-install config
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob
-# End of lines configured by zsh-newuser-install
-#
-
-# completion
-autoload -U compinit bashcompinit
-compinit
-bashcompinit
-
-# aliases
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-# exports
-export PATH=~/.local/bin:~/.local/share/apx:$PATH
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
 
 # nvm export
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# sources
-source $HOME/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-source $HOME/.zsh/powerlevel10k/powerlevel10k.zsh-theme
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source $HOME/.zsh/apx-completions/apx-completions.zsh
-# source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source $HOME/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Load plugins.
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source ~/.p10k.zsh
 
