@@ -4,21 +4,21 @@ function zcompile-many() {
 }
 
 # Clone and compile to wordcode missing plugins.
-if [[ ! -e ~/.zsh/zsh-syntax-highlighting ]]; then
-  git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
-  zcompile-many ~/.zsh/zsh-syntax-highlighting/{zsh-syntax-highlighting.zsh,highlighters/*/*.zsh}
+if [[ ! -e $HOME/.zsh/zsh-syntax-highlighting ]]; then
+  git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh/zsh-syntax-highlighting
+  zcompile-many $HOME/.zsh/zsh-syntax-highlighting/{zsh-syntax-highlighting.zsh,highlighters/*/*.zsh}
 fi
-if [[ ! -e ~/.zsh/zsh-autosuggestions ]]; then
-  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
-  zcompile-many ~/.zsh/zsh-autosuggestions/{zsh-autosuggestions.zsh,src/**/*.zsh}
+if [[ ! -e $HOME/.zsh/zsh-autosuggestions ]]; then
+  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.zsh/zsh-autosuggestions
+  zcompile-many $HOME/.zsh/zsh-autosuggestions/{zsh-autosuggestions.zsh,src/**/*.zsh}
 fi
-if [[ ! -e ~/.zsh/powerlevel10k ]]; then
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
-  make -C ~/.zsh/powerlevel10k pkg
+if [[ ! -e $HOME/.zsh/powerlevel10k ]]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.zsh/powerlevel10k
+  make -C $HOME/.zsh/powerlevel10k pkg
 fi
-if [[ ! -e ~/.zsh/zsh-vi-mode ]]; then
-  git clone --depth=1 https://github.com/jeffreytse/zsh-vi-mode.git /.zsh/zsh-vi-mode
-  zcompile-many ~/.zsh/zsh-vi-mode/{zsh-vi-mode.plugin.zsh,zsh-vi-mode.zsh}
+if [[ ! -e $HOME/.zsh/zsh-vi-mode ]]; then
+  git clone --depth=1 https://github.com/jeffreytse/zsh-vi-mode.git $HOME/.zsh/zsh-vi-mode
+  zcompile-many $HOME/.zsh/zsh-vi-mode/{zsh-vi-mode.plugin.zsh,zsh-vi-mode.zsh}
 fi
 
 # Activate Powerlevel10k Instant Prompt.
@@ -28,7 +28,7 @@ fi
 
 # Enable the "new" completion system (compsys).
 autoload -Uz compinit bashcompinit && compinit && bashcompinit
-[[ ~/.zcompdump.zwc -nt ~/.zcompdump ]] || zcompile-many ~/.zcompdump
+[[ $HOME/.zcompdump.zwc -nt $HOME/.zcompdump ]] || zcompile-many $HOME/.zcompdump
 unfunction zcompile-many
 
 # aliases
@@ -36,7 +36,7 @@ unfunction zcompile-many
 alias ls='exa --icons'
 
 # exports
-export PATH=~/.local/bin:~/.local/share/apx:~/git-repos/quickemu:~/.juliaup/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/share/apx:$HOME/git-repos/quickemu:$HOME/.juliaup/bin:$PATH
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
@@ -44,7 +44,7 @@ export GTK_MODULES="unity-gtk-module"
 export SAL_USE_VCLPLUGIN=gtk
 
 # zsh-newuser-install config
-HISTFILE=~/.histfile
+HISTFILE=$HOME/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob
@@ -57,9 +57,9 @@ export NVM_DIR="$HOME/.nvm"
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 # Load plugins.
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-source ~/.p10k.zsh
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/powerlevel10k/powerlevel10k.zsh-theme
+source $HOME/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $HOME/.p10k.zsh
 

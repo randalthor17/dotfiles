@@ -12,3 +12,4 @@ if vim.g.neovide then
   vim.o.guifont = "FiraCode Nerd Font:h10:sb"
   -- vim.g.neovide_transparency = 0.8
 end
+vim.b.wrapmode = "soft"
