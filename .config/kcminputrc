@@ -13,6 +13,7 @@ PointerAcceleration=0.200
 PointerAccelerationProfile=1
 
 [Mouse]
+X11LibInputXAccelProfileFlat=true
 cursorTheme=macOS-Monterey
 
 [Tmp]

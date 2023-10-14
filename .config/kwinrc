@@ -14,7 +14,6 @@ Number=4
 Rows=1
 
 [NightColor]
-Active=true
 LatitudeAuto=23.1694
 LongitudeAuto=89.2162
 Mode=Constant
@@ -27,6 +26,9 @@ kwin4_effect_translucencyEnabled=true
 padding=4
 
 [Tiling][7d638d7d-ef08-5d77-8ed4-b08f1756ff26]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][e9b17dae-99ee-54e8-8630-540a8ddcf524]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Wayland]

@@ -29,3 +29,6 @@ map("n", "<leader>fT", function()
 end, { desc = "Terminal (cwd)" })
 map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
 map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
+
+-- map <leader>h to open Alpha.nvim
+map("n", "<leader>h", "<cmd>Dashboard<cr>", { desc = "Open deshboard" })

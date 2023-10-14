@@ -122,14 +122,15 @@ ForegroundPositive=166, 227, 161
 ForegroundVisited=203, 166, 247
 
 [DirSelect Dialog]
-DirSelectDialog Size=844,598
-History Items[$e]=file:$HOME/Games,file:///var/lib/libvirt/images,file:$HOME/Music/SoulSeek,file:$HOME/Obsidian,file:$HOME/Games/External/Steam_Ext,file:$HOME/Games/External,file:$HOME/Games/Steam_Games,file:$HOME/Games
+DirSelectDialog Size=853,600
+History Items[$e]=file:///var/tmp/xdman,file:$HOME/Games/External/Steam_Ext,file:$HOME/Games,file:///var/lib/libvirt/images,file:$HOME/Music/SoulSeek,file:$HOME/Obsidian,file:$HOME/Games/External/Steam_Ext,file:$HOME/Games/External,file:$HOME/Games/Steam_Games,file:$HOME/Games
 
 [General]
+BrowserApplication=firefox-wayland.desktop
 ColorSchemeHash=318898541a271af612b5ed5ec1c5661d725d0f16
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=FiraCode Nerd Font SemBd,10,-1,5,63,0,0,0,0,0,Regular
+fixed=Maple Mono SC NF,10,-1,5,50,0,0,0,0,0
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [Icons]

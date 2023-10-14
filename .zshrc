@@ -34,9 +34,12 @@ unfunction zcompile-many
 # aliases
 # alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias ls='exa --icons'
+alias suck='aria2c --file-allocation=none -c -x 10 -s 10'
+alias open='xdg-open'
+alias n='nvim'
 
 # exports
-export PATH=$HOME/.local/bin:$HOME/.local/share/apx:$HOME/git-repos/quickemu:$HOME/.juliaup/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/share/apx:$HOME/.juliaup/bin:$PATH
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
@@ -47,14 +50,15 @@ export SAL_USE_VCLPLUGIN=gtk
 HISTFILE=$HOME/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd extendedglob
+setopt autocd extendedglob combiningchars
 
 # nvm export
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+ZSH_AUTOSUGGEST_STRATEGY=(completion)
 
 # Load plugins.
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -62,4 +66,11 @@ source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 source $HOME/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source $HOME/.p10k.zsh
+source $HOME/.cargo/env
 
+# bun completions
+[ -s "/home/rand/.bun/_bun" ] && source "/home/rand/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

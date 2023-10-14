@@ -6,8 +6,9 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][1]
-ItemGeometries-1280x1024=
-ItemGeometriesHorizontal=
+ItemGeometries-0x0=Applet-79:1008,560,272,272,0;
+ItemGeometries-1280x1024=Applet-79:1008,560,272,272,0;
+ItemGeometriesHorizontal=Applet-79:1008,560,272,272,0;
 activityId=327aba7d-e6be-4f24-b7b4-58442c15b2bb
 formfactor=0
 immutability=1
@@ -15,6 +16,19 @@ lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][1][Applets][79]
+immutability=1
+plugin=org.kde.plasma.notes
+
+[Containments][1][Applets][79][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][1][Applets][79][Configuration][General]
+color=translucent-light
+fontSize=20
+noteId=6ef38b03-2cbe-4462-882f-856d4597b8
 
 [Containments][1][ConfigDialog]
 DialogHeight=540
@@ -26,7 +40,7 @@ ToolBoxButtonX=124
 ToolBoxButtonY=30
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=/home/rand/Downloads/waves/Waves Dark Alt 6016x6016.jpg
+Image=/home/rand/Pictures/outerwilds.png
 SlidePaths=/usr/share/wallpapers/
 
 [Containments][27]
@@ -50,7 +64,7 @@ immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
 
 [Containments][27][Applets][29][Configuration]
-PreloadWeight=34
+PreloadWeight=26
 
 [Containments][27][Applets][30]
 immutability=1
@@ -143,6 +157,10 @@ plugin=org.kde.plasma.mediacontroller
 [Containments][27][Applets][71][Configuration]
 PreloadWeight=0
 
+[Containments][27][Applets][80]
+immutability=1
+plugin=org.kde.kscreen
+
 [Containments][27][Configuration]
 PreloadWeight=42
 
@@ -176,7 +194,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][42][Applets][60][Configuration]
-PreloadWeight=85
+PreloadWeight=100
 popupHeight=450
 popupWidth=396
 
@@ -204,11 +222,12 @@ plugin=org.kde.resourcesMonitor-fork
 enableShadows=false
 fontScale=35
 graphHeight=1
+graphOrders=cpu,memory,gpu,network,disks
 graphWidth=1
 
 [Containments][42][Applets][72][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=634
+DialogWidth=824
 
 [Containments][42][Applets][72][Configuration][General]
 gpuMemoryInPercent=true
@@ -341,14 +360,14 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][48][Applets][62][Configuration]
-PreloadWeight=59
+PreloadWeight=45
 
 [Containments][48][Applets][63]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][48][Applets][63][Configuration]
-PreloadWeight=97
+PreloadWeight=100
 
 [Containments][48][Applets][64][Configuration]
 PreloadWeight=42
@@ -374,6 +393,7 @@ hiddenItems=KeePassXC,Free Download Manager,org.kde.plasma.battery,org.kde.plasm
 iconSpacing=1
 knownItems=org.kde.kdeconnect,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.battery,dev.jhyub.supergfxctl,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.kscreen
 scaleIconsToFit=true
+shownItems=org.kde.plasma.networkmanagement
 
 [Containments][65]
 activityId=
@@ -393,7 +413,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][65][Applets][66][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:org.kde.discover.desktop,preferred://filemanager,preferred://browser,applications:thorium-browser.desktop,applications:discord.desktop
+launchers=applications:systemsettings.desktop,applications:org.kde.discover.desktop,preferred://filemanager,applications:thorium-browser.desktop,applications:firefox-wayland.desktop,applications:discord.desktop
 showOnlyCurrentDesktop=false
 
 [Containments][65][Applets][73]
@@ -514,7 +534,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=26
+PreloadWeight=2
 
 [Containments][8][Applets][70]
 immutability=1
@@ -541,6 +561,23 @@ PreloadWeight=42
 extraItems=org.kde.kdeconnect,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.battery,dev.jhyub.supergfxctl,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.kscreen
 knownItems=org.kde.kdeconnect,org.kde.plasma.nightcolorcontrol,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.devicenotifier,org.kde.plasma.battery,dev.jhyub.supergfxctl,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.kscreen
 
+[Containments][81]
+activityId=7109dbc6-ccc2-44ca-9bd2-fd6d9b7da467
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.desktopcontainment
+wallpaperplugin=org.kde.image
+
+[Containments][81][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][81][Wallpaper][org.kde.image][General]
+Image=/home/rand/Pictures/windows-error.jpg
+SlidePaths=/home/rand/.local/share/wallpapers/,/usr/share/wallpapers/
+
 [ScreenMapping]
-itemsOnDisabledScreens=
-screenMapping=
+itemsOnDisabledScreens=0,7109dbc6-ccc2-44ca-9bd2-fd6d9b7da467,1,desktop:/Portraits
+screenMapping=desktop:/Portraits,0,327aba7d-e6be-4f24-b7b4-58442c15b2bb

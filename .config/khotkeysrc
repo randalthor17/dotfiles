@@ -998,6 +998,7 @@ DirSelectDialog Size[$d]
 History Items[$d]
 
 [General]
+BrowserApplication[$d]
 ColorScheme[$d]
 ColorSchemeHash[$d]
 XftHintStyle[$d]
