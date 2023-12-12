@@ -9,7 +9,8 @@ if vim.g.neovide then
   vim.g.neovide_remember_window_size = true
   vim.g.neovide_cursor_antialiasing = true
   vim.g.neovide_cursor_animate_in_insert_mode = true
-  vim.o.guifont = "Maple Mono SC NF:h10:sb"
+  vim.o.guifont = "Maple Mono SC NF:h11:sb"
   -- vim.g.neovide_transparency = 0.8
 end
-vim.b.wrapmode = "soft"
+-- vim.b.wrapmode = "soft"
+vim.opt.timeoutlen = 40

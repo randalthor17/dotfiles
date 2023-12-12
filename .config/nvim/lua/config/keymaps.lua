@@ -20,15 +20,15 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- floating terminal
-local lazyterm = function()
-  Util.float_term(nil, { cwd = Util.get_root() })
-end
-map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
-map("n", "<leader>fT", function()
-  Util.float_term()
-end, { desc = "Terminal (cwd)" })
-map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
-map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
+-- local lazyterm = function()
+--   Util.float_term(nil, { cwd = Util.get_root() })
+-- end
+-- map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
+-- map("n", "<leader>fT", function()
+--   Util.terminal.open({ cwd = Util.get_root() })
+-- end, { desc = "Terminal (cwd)" })
+-- map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
+-- map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
 
 -- map <leader>h to open Alpha.nvim
 map("n", "<leader>h", "<cmd>Dashboard<cr>", { desc = "Open deshboard" })

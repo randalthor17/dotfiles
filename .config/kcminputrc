@@ -4,7 +4,14 @@ update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize,kcminp
 [Keyboard]
 NumLock=0
 
+[Libinput][1][1][Network Tablet]
+OutputArea=0,0,1,1.2592592592592593
+
 [Libinput][1133][49271][Logitech USB Optical Mouse]
+PointerAccelerationProfile=1
+
+[Libinput][12538][4160][INSTANT USB GAMING MOUSE ]
+PointerAcceleration=0.400
 PointerAccelerationProfile=1
 
 [Libinput][6392][3991][USB OPTICAL MOUSE ]
@@ -14,7 +21,7 @@ PointerAccelerationProfile=1
 
 [Mouse]
 X11LibInputXAccelProfileFlat=true
-cursorTheme=macOS-Monterey
+cursorTheme=Catppuccin-Mocha-Lavender-Cursors
 
 [Tmp]
 update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize

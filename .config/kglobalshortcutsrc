@@ -1,12 +1,15 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-327aba7d-e6be-4f24-b7b4-58442c15b2bb=none,none,Switch to activity "Default"
-switch-to-activity-7109dbc6-ccc2-44ca-9bd2-fd6d9b7da467=none,none,Switch to activity "Alt"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
+
+[arch-discord.desktop]
+_k_friendly_name=Discord  (on arch)
+_launch=none,none,Launch Discord  (on arch)
 
 [discord-screenaudio]
 _k_friendly_name=discord-screenaudio
@@ -16,6 +19,15 @@ toggleMute=none,none,Toggle Mute
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility
+
+[kalarm]
+_k_friendly_name=KAlarm
+newAudio=none,none,New Audio Alarm
+newCommand=none,none,New Command Alarm
+newDisplay=none,none,New Display Alarm
+newEmail=none,none,New Email Alarm
+spread=none,none,Spread Windows
+stopAudio=none,none,Stop Play
 
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
@@ -31,6 +43,14 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
+
+[killall-2.desktop]
+_k_friendly_name=\s--user $USER --ignore-case --signal SIGTERM ffmpeg
+_launch=Ctrl+Shift+F9,none,killall --user $USER --ignore-case --signal SIGTERM ffmpeg
+
+[killall-3.desktop]
+_k_friendly_name=killall -s1 ffmpeg
+_launch=Ctrl+Shift+F10,none,killall -s1 ffmpeg
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -219,6 +239,10 @@ playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
+[neovide.desktop]
+_k_friendly_name=Neovide
+_launch=,none,Launch Neovide
+
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin
 _launch=Meta+E,Meta+E,Dolphin
@@ -280,6 +304,7 @@ activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 3=Alt+F1,none,Activate Application Launcher Widget
 activate widget 43=none,none,Activate Application Launcher Widget
 activate widget 73=none,none,Activate Application Dashboard Widget
+activate widget 84=Meta+Ctrl+Alt+T,none,Activate Panel Transparency Button Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels

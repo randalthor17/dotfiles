@@ -2,10 +2,16 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
-Description=No titlebar
+Description=NoBorder
 noborder=true
-noborderrule=4
+noborderrule=2
 types=1
+
+[8f13a94b-89c5-4617-9860-79ad38c54603]
+Description=PanelTransparency
+opacityinactive=65
+opacityinactiverule=2
+types=4
 
 [General]
 count=1
@@ -17,3 +23,15 @@ noborder=true
 noborderrule=3
 types=1
 wmclassmatch=1
+
+[bba9bb88-9758-410f-886a-d6bf36401b06]
+Description=NoBorder
+noborder=true
+noborderrule=2
+types=1
+
+[d56c0258-8379-411d-8663-e1bac8493c02]
+Description=NoBorder
+noborder=true
+noborderrule=2
+types=1

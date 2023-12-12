@@ -5,11 +5,11 @@ return {
       colorscheme = "catppuccin",
     },
   },
-  {
-    "williamboman/mason.nvim",
-    "mfussenegger/nvim-dap",
-    "jay-babu/mason-nvim-dap.nvim",
-  },
+  -- {
+  --   "williamboman/mason.nvim",
+  --   "mfussenegger/nvim-dap",
+  --   "jay-babu/mason-nvim-dap.nvim",
+  -- },
   {
     "hrsh7th/nvim-cmp",
     version = false, -- last release is way too old
@@ -52,5 +52,11 @@ return {
     init = function()
       require("luasnip.loaders.from_vscode").lazy_load()
     end,
+  },
+  {
+    "ahmedkhalf/project.nvim",
+    opts = {
+      manual_mode = false,
+    },
   },
 }

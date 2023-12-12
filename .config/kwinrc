@@ -1,6 +1,9 @@
 [$Version]
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered
 
+[Compositing]
+LatencyPolicy=Medium
+
 [Desktops]
 Id_1=cb855318-7ddc-4e2e-9056-88924899e0e6
 Id_2=f9cce946-eee7-4cd8-b79f-9c2ecb169743
@@ -13,6 +16,9 @@ Name_4=4
 Number=4
 Rows=1
 
+[Effect-kwin4_effect_translucency]
+Inactive=73
+
 [NightColor]
 LatitudeAuto=23.1694
 LongitudeAuto=89.2162
@@ -20,7 +26,12 @@ Mode=Constant
 NightTemperature=5000
 
 [Plugins]
+contrastEnabled=false
 kwin4_effect_translucencyEnabled=true
+
+[SubSession: 7109dbc6-ccc2-44ca-9bd2-fd6d9b7da467]
+active=-1
+count=0
 
 [Tiling]
 padding=4
@@ -39,9 +50,11 @@ RollOverDesktops=true
 
 [Xwayland]
 Scale=1
+XwaylandEavesdrops=Combinations
 
 [org.kde.kdecoration2]
-BorderSize=Large
+BorderSize=Oversized
 BorderSizeAuto=false
-library=org.kde.breeze
-theme=Breeze
+ButtonsOnLeft=MNS
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__CatppuccinMocha-Classic
